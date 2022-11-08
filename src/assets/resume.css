@@ -1,0 +1,71 @@
+.resume_entry {
+  border: 1px solid white;
+  padding: 20px;
+  text-align: left;
+  margin: 10px;
+}
+
+.details {
+  border: 1px solid white;
+  padding: 20px;
+  text-align: left;
+  margin: 20px;
+}
+.details>div>p{
+    margin: 0;
+}
+.resume_entry>p{
+    margin: 0;
+}
+.self {
+  width: 100px;
+  border-left: 5px solid rgb(255, 48, 165);
+  float: left;
+  margin: 0px 20px 20px 0px;
+}
+.skillsDev {
+  clear: both;
+}
+.skillsDev > span {
+  color: grey;
+  font-weight: 600;
+}
+.skillsGraphics > span {
+  color: grey;
+  font-weight: 600;
+}
+.Diplomas > span {
+  color: grey;
+  font-weight: 600;
+}
+
+.Title {
+  font-weight: 600;
+}
+
+.SubTitle {
+  color: grey;
+}
+
+.title {
+  font-weight: 800;
+}
+
+.duration {
+  color: grey;
+}
+
+.desc {
+  font-weight: 200;
+}
+
+@media (max-width: 850px) { 
+    .resume {
+        margin: 30px 0px 0px 0px;
+        top: 0;
+        left: 0;
+        transform: initial;
+      }
+ }
+
+
