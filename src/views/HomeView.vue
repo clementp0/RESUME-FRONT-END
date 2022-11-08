@@ -51,6 +51,12 @@ export default {
 </script>
 
 <style scoped>
+select{
+  margin-left: 5px;
+}
+select:focus {
+    outline: none;
+}
 .intro {
   text-align: left;
 }
