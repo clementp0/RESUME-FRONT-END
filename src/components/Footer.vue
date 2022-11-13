@@ -1,14 +1,16 @@
 <template>
       <div class="footer">
+        <div class="left">
+          <a :href="windows" target="_blank"><img alt="windows95_logo" src="../images/icons/windows.svg"></a>
+        </div>
       <div class="socials">
         <a :href="github" target="_blank"><img alt="github_logo" src="../images/icons/github.svg"></a>
         <a :href="linkedin" target="_blank"><img alt="linkedin" src="../images/icons/linkedin.svg"></a>
         <a :href="instagram" target="_blank"><img alt="instagram_logo" src="../images/icons/instagram.svg"></a>
       </div>
-      <div class="others">
+      <div class="right">
         <router-link class="right_btn" to="/status"><img alt="status_logo" src="../images/icons/server.svg"></router-link>
         <router-link class="right_btn" to="/archives"><img alt="archives_logo" src="../images/icons/EFI.svg"></router-link>
-
       </div>
     </div>
 </template>
@@ -18,6 +20,7 @@ export default {
     name: 'FooterComponent',
     data(){
       return {
+        windows: process.env.VUE_APP_WINDOWS,
         github: process.env.VUE_APP_GITHUB,
         linkedin: process.env.VUE_APP_LINKEDIN,
         instagram: process.env.VUE_APP_INSTAGRAM
@@ -43,8 +46,14 @@ export default {
   width: 50px;
   height: 50px;
 }
+.left{
+  position: fixed;
+  margin-left: 10px;
+  left: 0;
+  bottom: 0;
+}
 
-.others {
+.right {
   position: fixed;
   margin-right: 10px;
   right: 0;
