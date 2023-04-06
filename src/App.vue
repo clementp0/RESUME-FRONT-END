@@ -1,5 +1,5 @@
 <template>
-  <PreLoader />
+  <!-- <PreLoader /> -->
   <DarkModeSwitch />
   <div class="menu">
     <MenuComponent />
@@ -14,14 +14,14 @@
 <script>
 import "./assets/main.css";
 import "./assets/mobile.css";
-import PreLoader from './components/Preloader.vue';
+// import PreLoader from './components/Preloader.vue';
 import MenuComponent from './components/Menu.vue';
 import DarkModeSwitch from './components/DarkModeSwitch.vue';
 
 export default {
   name: 'HomeView',
   components: {
-    PreLoader,
+    // PreLoader,
     MenuComponent,
     DarkModeSwitch,
   },
