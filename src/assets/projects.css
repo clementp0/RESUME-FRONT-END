@@ -1,0 +1,51 @@
+.project_header{
+    border-bottom: 1px solid var(--gray);
+    display: inline-flex;
+}
+
+.project_header_data{
+    padding-left: 20px;
+}
+.project_image{
+    width: 150px;
+    height: 150px;
+}
+.project_title{
+    font-weight: 600;
+    font-size: 1.5em;
+    margin-top: 0;
+}
+
+.project_meta {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.project_meta > div {
+    display: inline-block;
+}
+.project_item {
+    margin-bottom: 7px;
+    font-weight: 600;
+}
+
+.project_item_result{
+    text-decoration: none;
+    margin: 0;
+    font-weight: 500;
+    color: var(--gray);
+    font-size: 13px;
+}
+
+.project_preview{
+    width: 100%;
+    margin-top: 20px;
+}
+
+.project_desc_mobile{
+    display: none;
+}
+
+.project_status_mobile{
+    display: none;
+}

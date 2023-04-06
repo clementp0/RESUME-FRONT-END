@@ -1,0 +1,81 @@
+@media (max-width: 1000px) {
+.menu {
+    display: none;
+}
+.content{
+    margin-left: 0px;
+    width: 100%;
+}
+.render {
+    margin: auto!important;
+    position: initial!important;
+    top: 0px!important;
+    left: 0!important;
+    margin-top: 30px!important;
+    transform: translate(0%, 0%)!important;
+}
+
+.intro_container{
+    width: 100vw;
+}
+.intro {
+    margin: auto;
+    width: 80%;
+    transform: translate(0%,100%);
+}
+
+.archive_container {
+    max-width: 80%;
+    margin: auto;
+    
+}
+
+.project_desc{
+    display: none;
+}
+.project_desc_mobile{
+    display: block!important;
+    border-bottom: 1px solid var(--gray);
+    padding-bottom: 20px;
+    font-weight: 600;
+    font-size: 13px;
+}
+.project_header{
+    border-bottom: 0px!important;
+}
+.project_status{
+    display: none!important;
+}
+
+.project_status_mobile{
+    display: block!important;
+    font-weight: 600;
+    font-size: 13px;
+}
+.project_meta{
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.archive_entry_container {
+    min-width: 80%!important;
+    padding-bottom: 10px;
+}
+p.entry_name {
+    font-size: 13px!important;
+}
+.archive_image {
+    width: 80px!important;
+    height: 80px!important;
+}
+
+.project_container{
+    margin: auto;
+    width: 80%;
+    transform: translate(0%,50%);
+}
+.contact_container{
+    width: 80%;
+    transform: translate(0%,10%);
+}
+}

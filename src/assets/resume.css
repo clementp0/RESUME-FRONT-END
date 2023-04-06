@@ -1,12 +1,11 @@
 .resume_entry {
-  border: 1px solid white;
   padding: 20px;
   text-align: left;
   margin: 10px;
 }
 
 .details {
-  border: 1px solid white;
+  border-bottom: 1px solid var(--gray-dark);
   padding: 20px;
   text-align: left;
   margin: 20px;
@@ -19,41 +18,14 @@
 }
 .self {
   width: 100px;
-  border-left: 5px solid rgb(255, 48, 165);
+  border-left: 5px solid var((--black));
   float: left;
   margin: 0px 20px 20px 0px;
 }
 .skillsDev {
   clear: both;
 }
-.skillsDev > span {
-  color: grey;
-  font-weight: 600;
-}
-.skillsGraphics > span {
-  color: grey;
-  font-weight: 600;
-}
-.Diplomas > span {
-  color: grey;
-  font-weight: 600;
-}
 
-.Title {
-  font-weight: 600;
-}
-
-.SubTitle {
-  color: grey;
-}
-
-.title {
-  font-weight: 800;
-}
-
-.duration {
-  color: grey;
-}
 
 .desc {
   font-weight: 200;
@@ -67,5 +39,72 @@
         transform: initial;
       }
  }
+ .content-intro{
+  height: 120px;
+  border-bottom: 1px solid var(--gray-dark);
+  margin-bottom: 30px
+ }
 
+.content-section{
+  text-decoration: none;
+  line-height: 2em;
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--gray);
+  text-align: center;
+}
 
+ .render {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.title-section{
+  text-align: center;
+  margin: auto!important;
+  font-size: 1.4em;
+  color: var(--white);
+  background-color: var(--gray);
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 18px;
+  text-transform: capitalize;
+  width: fit-content;
+  padding: 0px 10px 0px 10px;
+  }
+.Title{
+  font-weight: 600
+}
+.SubTitle{
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--gray);
+}
+  .title{
+    text-align: left!important;
+    text-decoration: none;
+    line-height: 2em;
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--gray);
+    text-align: center;
+  }
+  .company{
+    font-size: 13px;
+    font-weight: 600;
+  }
+  .duration{
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--gray-light);
+  }
+  .desc{
+    font-size: 13px;
+    font-weight: 600;
+  }
+  .accordion-item__content {
+    padding-left: 30px;
+}

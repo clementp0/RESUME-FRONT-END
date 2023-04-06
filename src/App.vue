@@ -1,58 +1,29 @@
 <template>
-  <PreLoader />
-  <HeaderComponent />
-  <div class="render" v-bind:class="{ 'resume': ['/resume/en', '/resume/fr', '/resume/pl'].includes($route.path)}" >
-    <router-view />
+  <!-- <PreLoader /> -->
+  <DarkModeSwitch />
+  <div class="menu">
+    <MenuComponent />
   </div>
-  <FooterComponent />
+  <div class="content">
+    <div class="render">
+         <router-view :key="$route.path" />
+  </div>
+  </div>
 </template>
 
 <script>
-import PreLoader from './components/Preloader.vue';
-import HeaderComponent from './components/Header.vue';
-import FooterComponent from './components/Footer.vue';
+import "./assets/main.css";
+import "./assets/mobile.css";
+// import PreLoader from './components/Preloader.vue';
+import MenuComponent from './components/Menu.vue';
+import DarkModeSwitch from './components/DarkModeSwitch.vue';
+
 export default {
   name: 'HomeView',
   components: {
-    PreLoader,
-    HeaderComponent,
-    FooterComponent
+    // PreLoader,
+    MenuComponent,
+    DarkModeSwitch,
   },
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color:white;
-}
-
-body {
-  background-image: url('./images/Dot Grid.svg');
-  background-color: #181818;
-  margin: 0;
-}
-
-
-.render {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.translate-enter-active,
-.translate-leave-active {
-  transition: all 0.5s ease;
-}
-
-.translate-enter-from,
-.translate-leave-to {
-  opacity: 0;
-  transform: translateX(30px);
-}
-</style>

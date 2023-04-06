@@ -1,6 +1,6 @@
 <template>
   <transition name="translate" mode="out-in">
-  <div v-if="!isloading && !error">
+  <div v-if="!isloading && !error" class="intro_container">
     <div class="intro" v-for="introData in intro" v-bind:key="introData">
       <h1>{{ introData.hey }}</h1>
       <p><b>{{ introData.intro }}</b><br />
@@ -29,7 +29,6 @@ export default {
       lang: 'en',
       intro: 'null',
       isloading: true,
-      error: false,
       log:''
     }
   },
@@ -68,11 +67,10 @@ select {
 }
 
 .resumeviewer {
-  background-color: rgb(255, 48, 165);
+  background-color: var(--black);
   text-decoration: none;
-  color: white;
+  color: var(--white);
   padding: 5px 15px 5px 15px;
   font-weight: 600;
-  border-radius: 11px;
 }
 </style>

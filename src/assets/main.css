@@ -1,0 +1,80 @@
+:root {
+  --white: #1C1C1C;
+  --black: #EFECEC;
+  --gray: #d2d2d2;
+  --gray-light :#767676;
+  --gray-dark: #43454F;
+}
+
+*{
+  transition: color 30ms ease-in-out;
+  transition: background-color 30ms ease-in-out;
+  -webkit-font-smoothing: antialiased;
+}
+
+.accordion-list .accordion-item > .accordion-item__summary{
+  transition: color 30ms ease-in-out!important;
+}
+
+body {
+  background-color: var(--white);
+  margin: 0;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 30ms ease-in-out;
+}
+
+#app {
+  display: flex;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: var(--black);
+}
+
+.content {
+  background-image: url('../images/dark_grid.svg');
+  width: calc(100% - 180px);
+  height: 100vh;
+  margin-left: 180px;
+  position: fixed;
+  overflow: auto;
+}
+
+#light{
+  background-image: url('../images/light_grid.svg');
+}
+
+.render {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.translate-enter-active,
+.translate-leave-active {
+  transition: all 0.5s ease;
+}
+
+.translate-enter-from,
+.translate-leave-to {
+  opacity: 0;
+  transform: translateX(30px);
+}
+
+.logo{
+  font-size: 15px;
+  color: var(--black);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.logo > p::after{
+  content:'Clément';
+  font-size: 10px;
+  font-weight: 100;
+}

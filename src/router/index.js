@@ -2,12 +2,9 @@ import { createRouter, createWebHistory } from 'vue-router'
 import ErrorView from '../views/ErrorView.vue'
 import HomeView from '../views/HomeView.vue'
 import ContactView from '../views/ContactView.vue'
-import ArchiveView from '../views/ArchiveView.vue'
-import StatusView from '../views/StatusView.vue'
-import ResumeEn from '../views/Resume/ResumeEn.vue'
-import ResumeFr from '../views/Resume/ResumeFr.vue'
-import ResumePl from '../views/Resume/ResumePl.vue'
-
+import Resume from '../views/Resume.vue'
+import Ressources from '../views/Ressources.vue'
+import Project from '../views/Project.vue'
 
 const routes = [
   {
@@ -35,45 +32,37 @@ const routes = [
     }
   },
   {
-    path: '/archives',
-    name: 'archive',
-    component: ArchiveView,
+    path: '/resume/:lang',
+    name: 'resume',
+    component: Resume,
     meta: {
-      title: 'Archive',
+      title: 'Resume',
     }
   },
   {
-    path: '/status',
-    name: 'status',
-    component: StatusView,
+    path: '/resume/:lang',
+    name: 'resume',
+    component: Resume,
     meta: {
-      title: 'Status',
+      title: 'Resume',
     }
   },
   {
-    path: '/resume/en',
-    name: 'resumeEn',
-    component: ResumeEn,
+    path: '/ressources',
+    name: 'Ressources',
+    component: Ressources,
     meta: {
-      title: '(EN) Resume',
+      title: 'Ressources',
     }
   },
   {
-    path: '/resume/fr',
-    name: 'resumeFr',
-    component: ResumeFr,
+    path: '/project/:project',
+    name: 'project',
+    component: Project,
     meta: {
-      title: '(FR) Resume',
+      title: 'Project',
     }
   },
-  {
-    path: '/resume/pl',
-    name: 'resumePl',
-    component: ResumePl,
-    meta: {
-      title: '(PL) Resume',
-    }
-  }
 ]
 
 const router = createRouter({

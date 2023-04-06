@@ -1,0 +1,55 @@
+.archive_image {
+    width: 70px;
+    height: 70px;
+    background-color: white;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.archive_container{
+    text-align: left;
+}
+
+.archive_entry_container {
+    display: inline-flex;
+    flex-direction: row;
+    border-bottom: 1px solid var(--gray-light);
+    min-width: 600px;
+    margin-bottom: 20px;
+}
+
+.archive_item.active_false {
+    filter: saturate(0.0);
+    opacity: 0.5;
+}
+
+p.entry_name {
+    color: var(--black);
+    font-weight: 600;
+    font-size: 1.2em;
+    margin-top: 0;
+    margin-bottom: 3px;
+}
+#archive_link{
+    text-decoration: none;
+}
+
+
+.repository{
+    margin-top: 0px;
+    margin-bottom: 0;
+    font-weight: 600;
+    color: var(--black);
+    font-size: 15px;
+    margin-bottom: 3px;
+}
+.status{
+    margin:0;
+    font-weight: 500;
+    color:var(--gray);
+    font-size: 13px;
+}
+
+i{
+    font-size: 10px;
+}

@@ -52,8 +52,8 @@ export default {
 <style scoped>
 .contact_container {
   width: 350px;
-  border: 1px solid grey;
-  background-color: #181818;
+  border: 1px solid var(--gray-dark);
+  background-color: var(--white);
   margin: auto;
   /* CHANGE THIS  */
   padding-bottom: 30px;
@@ -62,13 +62,13 @@ export default {
 .contact_header {
   height: 120px;
   background-size: cover;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid var(--gray-dark);
   opacity: .8;
   background-image: url("../images/buildings.jpeg");
 }
 
 .contact_title {
-  border-bottom: 1px solid grey;
+  border-bottom:1px solid var(--gray-dark);
   margin: auto;
   margin-top: 20px;
   padding-bottom: 20px;
@@ -79,7 +79,7 @@ export default {
 }
 
 .contact_entry {
-  border: 1px solid grey;
+  border: 1px solid var(--gray-dark);
   border-radius: 5px;
   margin: auto;
   margin-top: 20px;
@@ -88,14 +88,14 @@ export default {
 }
 
 .contact_entry:hover {
-  background-color: #111111;
+  background-color: var(--white);
   transition-duration: 0.3s;
 }
 
 .contact_entry_name {
   float: right;
   margin-right: 10px;
-  color: rgb(213, 213, 213);
+  color: var(--black);
 }
 </style>
     
