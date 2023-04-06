@@ -1,7 +1,16 @@
 @media (max-width: 1000px) {
-.menu {
-    display: none;
+.menu-desktop {
+    display: none!important;
 }
+
+.menu-side{
+    display: block!important;
+}
+
+.menu {
+    width: 0px!important;
+}
+
 .content{
     margin-left: 0px;
     width: 100%;
