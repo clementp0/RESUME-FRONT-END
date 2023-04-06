@@ -10,6 +10,16 @@
     width: 150px;
     height: 150px;
 }
+
+.project_desc {
+    text-align: justify;
+    text-align: justify;
+    font-size: 13px;
+    font-weight: 600;
+}
+.project_desc_mobile {
+    text-align: justify;
+}
 .project_title{
     font-weight: 600;
     font-size: 1.5em;

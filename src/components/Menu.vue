@@ -51,7 +51,7 @@
     <router-link class="logo" to="/">
       <p>POMMERIE</p>
     </router-link>
-    <div class="socials">
+    <div class="socials social_dark">
       <a :href="github" target="_blank"><img alt="github_logo" src="../images/icons/github.svg"></a>
       <a :href="linkedin" target="_blank"><img alt="linkedin" src="../images/icons/linkedin.svg"></a>
       <a :href="instagram" target="_blank"><img alt="instagram_logo" src="../images/icons/instagram.svg"></a>
@@ -121,105 +121,5 @@ export default {
 };
 </script>
 <style>
-
-.menu-header-mobile{
-  margin-top:30px;
-}
-.menu-side{
-    display: none;
-}
-
-.menu-mobile {
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  transition: transform 250ms ease;
-  cursor: pointer;
-  z-index: 200;
-}
-
-.menu-mobile span {
-  position: relative;
-  display: block;
-  width: 50%;
-  height: 2px;
-  background-color: var(--black);
-  float: left;
-  transform-origin: center center;
-  transition: transform 250ms ease;
-  z-index: 200;
-}
-
-.menu-mobile span:nth-of-type(1) {
-  transform: translateY(-5px);
-}
-
-.menu-mobile span:nth-of-type(3) {
-  transform: translateY(5px);
-}
-
-#menu-mobile {
-  display: none;
-}
-
-#menu-mobile:checked~.menu-mobile {
-  background-color: transparent;
-  transform: rotate(360deg);
-  transition: transform 250ms ease;
-}
-
-#menu-mobile:checked~.menu-mobile span {
-  background-color: white;
-  transition: transform 250ms ease;
-}
-
-#menu-mobile:checked~.menu-mobile span:nth-of-type(1) {
-  transform: translateY(1px) rotate(45deg);
-}
-
-#menu-mobile:checked~.menu-mobile span:nth-of-type(2) {
-  display: none;
-}
-
-#menu-mobile:checked~.menu-mobile span:nth-of-type(3) {
-  transform: translateY(-1px) rotate(-45deg);
-}
-
-#menu-mobile:checked~.nav {
-  left: 0px;
-  transition: left 500ms ease;
-}
-
-#menu-mobile:checked~main {
-  transform: translateX(250px);
-  transition: transform 500ms ease;
-}
-
-.nav {
-  position: fixed;
-  top: 0;
-  left: -180px;
-  width: 180px;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-  background-color: var(--white);
-  border-right: 1px var(--gray-dark) solid;
-  transition: left 500ms ease;
-  z-index: 0;
-}
-
-
-.container {
-  width: 75%;
-  margin: 0 auto;
-}
 
 </style>
