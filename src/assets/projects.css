@@ -59,3 +59,20 @@
 .project_status_mobile{
     display: none;
 }
+
+.offline{
+    text-decoration: none;
+    margin: 0;
+    font-weight: 500;
+    color: var(--gray);
+    font-size: 13px;
+}
+
+
+.online{
+    text-decoration: none;
+    margin: 0;
+    font-weight: 500;
+    color: var(--gray);
+    font-size: 13px;
+}

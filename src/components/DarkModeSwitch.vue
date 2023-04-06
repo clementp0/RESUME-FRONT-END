@@ -18,7 +18,7 @@ export default {
                 element.setAttribute('id', 'light');
                 document.documentElement.style.setProperty('--white', '#EFECEC');
                 document.documentElement.style.setProperty('--black', '#313131');
-                document.documentElement.style.setProperty('--gray', '#767676');
+                document.documentElement.style.setProperty('--gray', '#3f3f3f');
                 document.documentElement.style.setProperty('--gray-light', '#d2d2d2');
             } else {
                 const element = document.querySelector('.content');
