@@ -45,7 +45,7 @@ export default {
   },
   mounted() {
     axios
-      .get(process.env.VUE_APP_API_SOCIALS)
+      .get(process.env.VUE_APP_API + 'intro')
       .catch(error => {
         this.error = true
         this.errorcode = error

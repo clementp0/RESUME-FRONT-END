@@ -1,11 +1,11 @@
 <template>
   <transition name="translate" mode="out-in">
-  <div v-if="!isloading && !error" class="intro_container">
+  <div class="intro_container">
     <div class="intro" v-for="introData in intro" v-bind:key="introData">
       <h1>{{ introData.hey }}</h1>
       <p><b>{{ introData.intro }}</b><br />
         {{ introData.baseline }}
-      </p>
+</p>
       <p>{{ introData.resume }}</p><br />
       <router-link class="resumeviewer" v-bind:to="'/resume/' + lang">View</router-link>
       <b> in</b><select v-model="lang">
@@ -16,38 +16,36 @@
     </div>
   </div>
 </transition>
-<img v-if="isloading || error" alt="loading_ico" src="../images/loading.svg">
 </template>
 
 <script>
-import axios from 'axios'
+import { mapState, mapActions } from "vuex";
 
 export default {
-  name: 'HomePage',
+  name: "HomeView",
+  computed: {
+    intro() {
+      return this.$store.state.intro;
+    },
+    ...mapState(["isLoading", "error"]),
+  },
+  created() {
+    this.fetchIntro();
+  },
+  methods: {
+    ...mapActions(["fetchIntro"]),
+  },
   data() {
     return {
       lang: 'en',
-      intro: 'null',
-      isloading: true,
-      log:''
-    }
-  },
-
-  mounted() {
-    axios
-      .get(process.env.VUE_APP_API_INTRO)
-      .then(response => (this.intro = response.data))
-      .catch(error => {
-        this.error = true
-        this.log = error
-      })
-      .finally(() => this.isloading = false)
+    };
   },
   activated(){
     document.title = process.env.VUE_APP_TITLE + ' | ' + 'Home'
   }
 };
 </script>
+
 
 <style scoped>
 select{

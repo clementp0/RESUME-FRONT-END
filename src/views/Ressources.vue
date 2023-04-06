@@ -1,8 +1,7 @@
 <template>
-    <transition name="translate" mode="out-in">
-        <div v-if="!isloading && !error" class="archive_container  project_container">
-            <!-- Data loop -->
-            <div class="archive_item" v-bind:class="'active_' + archive.active" v-for="archive in archive" v-bind:key="archive">
+    <transition name="translate" mode="out-in" appear>
+        <div  class="archive_container  project_container">
+            <div class="archive_item" v-bind:class="'active_' + archive.active" v-for="archive in ressources" v-bind:key="archive">
                 <a v-bind:class="'active_' + archive.active" id="archive_link" target="_blank" v-bind:href="archive.link">
                     <div class="archive_entry_container">
                         <img class="archive_image" :src="archive.Image">
@@ -15,39 +14,36 @@
                     </div>
                 </a>
             </div>
-            <!-- End -->
         </div>
     </transition>
-    <img v-if="isloading || error" alt="loading_ico" src="../images/loading.svg">
 </template>
 
 <script>
 import "../assets/archive.css";
-import axios from 'axios';
-export default {
-    name: 'RessourcesView',
-    data() {
-        return {
-            archive: null,
-            isloading: true,
-            error: false,
-            log: ''
-        }
-    },
+import { mapState, mapActions } from "vuex";
 
-    mounted() {
-        axios
-            .get(process.env.VUE_APP_API_ARCHIVE)
-            .then(response => (this.archive = response.data))
-            .catch(error => {
-                this.error = true
-                this.log = error
-            })
-            .finally(() => this.isloading = false)
+export default {
+  name: "RessourcesView",
+  computed: {
+    ressources() {
+      return this.$store.state.ressources;
     },
-    activated() {
-        document.title = process.env.VUE_APP_TITLE + ' | ' + 'Archive'
-    }
+    ...mapState(["isLoading", "error"]),
+  },
+  created() {
+    this.fetchRessources();
+  },
+  methods: {
+    ...mapActions(["fetchRessources"]),
+  },
+  data() {
+    return {
+      lang: 'en',
+    };
+  },
+  activated(){
+    document.title = process.env.VUE_APP_TITLE + ' | ' + 'Ressources'
+  }
 };
 </script>
       

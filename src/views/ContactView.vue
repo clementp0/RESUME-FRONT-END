@@ -1,13 +1,13 @@
 <template>
   <transition name="translate" mode="out-in">
-  <div v-if="!isloading && !error" class="contact_container">
+  <div class="contact_container">
     <div class="contact_header">
     </div>
     <p class="contact_title">
       Reach me 
     </p>
     <!-- Data loop -->
-    <div v-for="socials in socials" v-bind:key="socials">
+    <div v-for="socials in contact" v-bind:key="socials">
       <a target="_blank" v-bind:href="socials.url">
         <div class="contact_entry">
           <p class="contact_entry_name">{{ socials.name }} </p>
@@ -17,31 +17,29 @@
     <!-- End -->
   </div>
 </transition>
-<img v-if="isloading || error" alt="loading_ico" src="../images/loading.svg">
 </template>
     
 <script>
-import axios from 'axios'
+import { mapState, mapActions } from "vuex";
+
 export default {
-  name: 'ContactView',
+  name: "ContactView",
+  computed: {
+    contact() {
+      return this.$store.state.contact;
+    },
+    ...mapState(["isLoading", "error"]),
+  },
+  created() {
+    this.fetchContact();
+  },
+  methods: {
+    ...mapActions(["fetchContact"]),
+  },
   data() {
     return {
-      socials: null,
-      isloading: true,
-      error: false,
-      log:''
-    }
-  },
-
-  mounted() {
-    axios
-      .get(process.env.VUE_APP_API_SOCIALS)
-      .then(response => (this.socials = response.data))
-      .catch(error => {
-        this.error = true
-        this.log = error
-      })
-      .finally(() => this.isloading = false)
+      lang: 'en',
+    };
   },
   activated(){
     document.title = process.env.VUE_APP_TITLE + ' | ' + 'Contact'
@@ -74,7 +72,7 @@ export default {
   padding-bottom: 20px;
   width: 85%;
   text-align: left;
-  color: white;
+  color: var(--black);
   font-weight: 600;
 }
 
