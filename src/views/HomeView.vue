@@ -1,5 +1,5 @@
 <template>
-  <transition name="translate" mode="out-in">
+  <transition name="translate" mode="out-in" appear>
   <div class="intro_container">
     <div class="intro" v-for="introData in intro" v-bind:key="introData">
       <h1>{{ introData.hey }}</h1>
