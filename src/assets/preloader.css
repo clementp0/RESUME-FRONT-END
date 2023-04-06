@@ -1,0 +1,44 @@
+
+.loaderoverlay {
+    height: 100vh;
+    width: 100vw;
+    background-image: url('../images/dark_grid.svg');
+    background-color: var(--white);
+    position: absolute;
+    z-index: 2;
+    margin: 0;
+    top: 0;
+  }
+  
+  .preloader {
+    font-weight: 600;
+    font-size: 13px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .preloader>div>img{
+    width: 50px;
+  }
+  a{
+    color: white;
+    text-decoration: none;
+  }
+  .refresh{
+    text-decoration: underline;
+  }
+  .refresh:hover{
+    cursor: pointer;
+  }
+  .v-enter-active,
+  .v-leave-active {
+    transition: opacity 0.5s ease;
+    transition-delay: 1s;
+  }
+  
+  .v-enter-from,
+  .v-leave-to {
+    opacity: 0;
+  }

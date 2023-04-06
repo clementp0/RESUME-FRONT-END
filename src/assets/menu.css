@@ -4,6 +4,7 @@
     border-right: 1px var(--gray-dark) solid;
     position: fixed;
     background-color: var(--white);
+    z-index: 1;
   }
 
 .menu-container{

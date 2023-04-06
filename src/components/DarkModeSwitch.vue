@@ -35,7 +35,7 @@ export default {
   
 <style>
 .switch-container {
-    z-index: 2;
+    z-index: 1;
     display: inline-block;
     position: fixed;
     width: 48px;

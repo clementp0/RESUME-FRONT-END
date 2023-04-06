@@ -7,7 +7,7 @@
         {{ introData.baseline }}
       </p>
       <p>{{ introData.resume }}</p><br />
-      <a class="resumeviewer" v-bind:href="'/resume/' + lang">View</a>
+      <router-link class="resumeviewer" v-bind:to="'/resume/' + lang">View</router-link>
       <b> in</b><select v-model="lang">
         <option value="fr">🇫🇷</option>
         <option value="en">🇬🇧</option>
