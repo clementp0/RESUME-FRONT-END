@@ -9,6 +9,7 @@
 .project_image{
     width: 150px;
     height: 150px;
+    margin-bottom: 20px;
 }
 
 .project_desc {
@@ -72,7 +73,12 @@
 .online{
     text-decoration: none;
     margin: 0;
-    font-weight: 500;
+    font-size: 13px;
     color: var(--gray);
     font-size: 13px;
+}
+
+.project_features{
+    font-size: 13px;
+    font-weight: 600;
 }

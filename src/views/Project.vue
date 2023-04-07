@@ -37,6 +37,8 @@
       <div class="project_data">
         <img class="project_preview" :src="project.preview">
       </div>
+      <div v-html="project.features" class="project_features">
+      </div>
     </div>
   </Transition>
 </template>
