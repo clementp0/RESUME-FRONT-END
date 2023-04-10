@@ -16,6 +16,7 @@
     text-align: left;
     padding-top: 200px;
     padding-bottom: 50px;
+    max-width: 850px;
 }
 .project_desc {
     text-align: justify;
@@ -65,7 +66,7 @@
 
 .project_features{
     margin-top: 10px;
-    width: 30%;
+    width: 27%;
 }
 
 .project_desc_mobile{
