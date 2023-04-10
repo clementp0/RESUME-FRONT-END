@@ -81,9 +81,12 @@ p.entry_name {
 .project_container{
     margin: auto;
     width: 80%;
-    transform: translate(0%,6%);
+    /* transform: translate(0%,6%); */
     padding-top: 0px!important;
     padding-bottom: 0px!important;
+}
+.project_header{
+    padding-top: 50px;
 }
 .contact_container{
     width: 80%;
@@ -105,6 +108,8 @@ p.entry_name {
   .project_preview{
     width: 100%!important;
   }
-  
 
+  .accordion-list {
+    padding-bottom: 150px;
+}
 }
