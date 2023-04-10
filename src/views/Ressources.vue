@@ -1,6 +1,6 @@
 <template>
     <transition name="translate" mode="out-in" appear>
-        <div  class="archive_container  project_container">
+        <div  class="archive_container">
             <div class="archive_item" v-bind:class="'active_' + archive.active" v-for="archive in ressources" v-bind:key="archive">
                 <a v-bind:class="'active_' + archive.active" id="archive_link" target="_blank" v-bind:href="archive.link">
                     <div class="archive_entry_container">
