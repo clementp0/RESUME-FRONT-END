@@ -112,4 +112,13 @@ p.entry_name {
   .accordion-list {
     padding-bottom: 150px;
 }
+
+
+.project_website{
+width: 90px;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+display: block;
+}
 }

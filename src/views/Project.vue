@@ -27,7 +27,7 @@
         </div>
         <div class="project_website">
           <p class="project_item">Website</p>
-          <a :href="'https://' + project.website" target="_blank" class="project_item_result">{{ project.website }}</a>
+          <a :href="'https://' + project.website" target="_blank" class="project_item_result project_website">{{ project.website }}</a>
         </div>
         <div class="project_state">
           <p class="project_item">Current State</p>
