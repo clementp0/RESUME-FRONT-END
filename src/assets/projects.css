@@ -12,6 +12,10 @@
     margin-bottom: 20px;
 }
 
+.project_container{
+    padding-top: 200px;
+    padding-bottom: 50px;
+}
 .project_desc {
     text-align: justify;
     text-align: justify;
@@ -49,8 +53,18 @@
 }
 
 .project_preview{
-    width: 100%;
-    margin-top: 20px;
+    width: 70%;
+}
+
+.project_data {
+    padding-top: 30px;
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.project_features{
+    margin-top: 10px;
+    width: 30%;
 }
 
 .project_desc_mobile{

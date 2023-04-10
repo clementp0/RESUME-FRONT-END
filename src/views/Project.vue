@@ -1,6 +1,6 @@
 <template>
   <transition name="translate" mode="out-in" appear>
-    <div class="archive_container">
+    <div class="archive_container project_container">
       <div class="project_header">
         <img class="project_image" :src="project.image">
         <div class="project_header_data">
@@ -36,9 +36,10 @@
       </div>
       <div class="project_data">
         <img class="project_preview" :src="project.preview">
+        <div v-html="project.features" class="project_features"></div>
       </div>
-      <div v-html="project.features" class="project_features">
-      </div>
+     
+      
     </div>
   </Transition>
 </template>

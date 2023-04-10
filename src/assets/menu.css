@@ -120,7 +120,7 @@
   }
   
   #menu-mobile:checked~.menu-mobile span {
-    background-color: white;
+    background-color: var(--black);
     transition: transform 250ms ease;
   }
   
