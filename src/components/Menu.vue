@@ -39,7 +39,7 @@
 </div>
   <!-- MOBILE MENU -->
 <div class="menu-side">
-  <input type="checkbox" id="menu-mobile" />
+  <input type="checkbox" id="menu-mobile" v-model="isChecked" />
   <label for="menu-mobile" class="menu-mobile">
     <span></span>
     <span></span>
@@ -48,7 +48,7 @@
 
   <nav class="nav">
     <div class="menu-header menu-header-mobile">
-    <router-link class="logo" to="/">
+    <router-link @click="uncheck" class="logo" to="/">
       <p>POMMERIE</p>
     </router-link>
     <div class="socials social_dark">
@@ -61,24 +61,24 @@
     <p class="menu-title">Resume</p>
     <ul>
       <li v-for="resumeLang in resume" v-bind:key="resumeLang">
-        <router-link v-bind:to="/resume/ + resumeLang.name">{{ resumeLang.title }}</router-link>
+        <router-link @click="uncheck" v-bind:to="/resume/ + resumeLang.name">{{ resumeLang.title }}</router-link>
       </li>
     </ul>
     <p class="menu-title" href="/projects">Projects</p>
     <ul>
       <li v-for="project in project" v-bind:key="project">
-        <router-link v-bind:to="/project/ + project.title">{{ project.title }}</router-link>
+        <router-link @click="uncheck" v-bind:to="/project/ + project.title">{{ project.title }}</router-link>
       </li>
     </ul>
     <p class="menu-title">Ressources</p>
     <ul>
       <li>
-        <router-link to="/ressources">OPENCORE EFI</router-link>
+        <router-link @click="uncheck" to="/ressources">OPENCORE EFI</router-link>
       </li>
     </ul>
   </div>
   <div class="menu-bottom">
-    <router-link class="menu-title" to="/contact">
+    <router-link @click="uncheck" class="menu-title" to="/contact">
       <p>Contact</p>
     </router-link>
   </div>
@@ -107,9 +107,13 @@ export default {
   },
   methods: {
     ...mapActions(['fetchResume', 'fetchProject']),
+    uncheck() {
+      this.isChecked = false;
+    }
   },
   data() {
     return {
+      isChecked: false,
       windows: process.env.VUE_APP_WINDOWS,
       github: process.env.VUE_APP_GITHUB,
       linkedin: process.env.VUE_APP_LINKEDIN,
